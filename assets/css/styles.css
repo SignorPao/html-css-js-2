@@ -16,7 +16,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 html,
@@ -28,6 +28,10 @@ body {
   font-family: "Montserrat", sans-serif;
   /* background-color: aquamarine; */
   /* min-height: 100vh; */
+}
+
+img {
+  width: 100%;
 }
 
 .section__container {
@@ -137,6 +141,48 @@ nav {
   color: var(--primary-color);
 }
 
+.header__container {
+  padding-top: 8rem;
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 2.5rem;
+}
+
+.header__content h1 span {
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+.header__image img {
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));
+  -webkit-filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));
+  animation: header 5s infinite;
+}
+
+@keyframes header {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(20px);
+  }
+}
+
 @media (width > 768px) {
   nav {
     padding: 2rem 1rem;
@@ -167,5 +213,17 @@ nav {
 
   .nav__links a {
     color: var(--text-dark);
+  }
+
+  .header__container {
+    padding-top: 5rem;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: 1fr,2fr; */
+    text-align: left;
+  }
+
+  .header__image {
+    grid-area: 1/2/2/3;
   }
 }
