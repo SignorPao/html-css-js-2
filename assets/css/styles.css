@@ -12,6 +12,7 @@
   --max-width: 1200px;
 }
 
+/* Base */
 * {
   margin: 0;
   padding: 0;
@@ -26,16 +27,14 @@ body {
 
 body {
   font-family: "Montserrat", sans-serif;
-  /* background-color: aquamarine; */
-  /* min-height: 100vh; */
 }
 
 img {
   display: block;
   max-width: 100%;
-  /* height: auto; */
 }
 
+/* Reusable classes */
 .section__container {
   max-width: var(--max-width);
   margin: auto;
@@ -79,6 +78,16 @@ img {
 
 a {
   text-decoration: none;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--extra-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-light);
 }
 
 /* Nav */
@@ -198,7 +207,6 @@ nav {
 }
 
 .about__image img {
-  /* max-width: 330px; */
   width: 100%;
   max-height: 300px;
   object-fit: cover;
@@ -222,8 +230,6 @@ nav {
 }
 
 .product__card img {
-  /* max-width: 330px; */
-  /* max-width: fit-content; */
   margin-inline: auto;
   margin-bottom: 1rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
@@ -566,7 +572,6 @@ nav {
     padding-top: 5rem;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
-    /* grid-template-columns: 1fr 2fr; */
     text-align: left;
   }
 
@@ -576,8 +581,6 @@ nav {
 
   .about__container {
     grid-template-columns: repeat(2, 1fr);
-    /* gap: 0; */
-    /* grid-template-columns: 55% 40%; */
     align-items: center;
     text-align: left;
   }
@@ -652,11 +655,15 @@ nav {
 
   .footer__bar {
     flex-direction: row;
-    /* padding: 1rem 0; */
   }
 }
 
 @media (width > 1100px) {
+  .header__container {
+    height: 90vh;
+    padding: 0 1rem;
+  }
+
   .header__content h1 {
     font-size: 2rem;
     line-height: 3rem;
@@ -672,21 +679,12 @@ nav {
   }
 
   .about__container {
-    /* overflow: hidden; */
-    /* max-width: 100%; */
     gap: 2%;
     grid-template-columns: 68% 30%;
-    /* grid-template-columns: repeat(4fr,1fr); */
   }
-
-  /* .product__grid {
-    grid-template-columns: repeat(3, 1fr);
-  } */
 
   .subscribe__container {
     grid-template-columns: 30% 68%;
     gap: 2%;
-    /* text-align: left; */
-    /* align-items: center; */
   }
 }

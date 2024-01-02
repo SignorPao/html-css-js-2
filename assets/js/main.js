@@ -2,7 +2,6 @@
 const menuBtn = document.getElementById("menu-btn"),
   navLinks = document.getElementById("nav-links"),
   menuBtnIcon = menuBtn.querySelector("i");
-// body = document.getElementById("body");
 
 menuBtn.addEventListener("click", () => {
   navLinks.classList.toggle("open");
@@ -18,12 +17,6 @@ navLinks.addEventListener("click", () => {
   navLinks.classList.remove("open");
   menuBtnIcon.setAttribute("class", "ri-menu-3-line");
 });
-
-// body.addEventListener("click", () => {
-//   navLinks.classList.remove("open");
-//   menuBtnIcon.setAttribute("class", "ri-menu-3-line");
-//   console.log('click body');
-// });
 
 /*========== Animate elements in viewport(Scrollreveal) ==========*/
 const scrollRevealOption = {
