@@ -67,3 +67,17 @@ ScrollReveal().reveal(".product__card", {
   ...scrollRevealOption,
   interval: 500,
 });
+
+// blog container
+ScrollReveal().reveal(".article__card", {
+  ...scrollRevealOption,
+  interval: 500,
+});
+
+/* Date */
+const theYear = new Date().getFullYear(),
+  year = document.getElementById("year");
+
+if (theYear > 2023) {
+  year.innerHTML = `-${theYear}`;
+}
